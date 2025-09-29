@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class SumAutoboxing {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter count of integers: ");
+        int n = sc.nextInt();
+
+        Integer sum = 0; // Autoboxing with Integer wrapper class
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter number " + (i+1) + ": ");
+            int num = sc.nextInt();  // primitive
+            sum += num;  // Autoboxing and Unboxing automatically happens here
+        }
+        System.out.println("Sum of integers = " + sum);
+        sc.close();
+    }
+}
